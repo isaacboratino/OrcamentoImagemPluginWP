@@ -17,30 +17,35 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
  
 // Verifica se não existe nenhum classe com o mesmo nome
-if ( ! class_exists('AngularPlugin') ) {
+if ( ! class_exists('OrcamentoImagemPluginWP') ) {
  
-	class AngularPlugin
+	class OrcamentoImagemPluginWP
 	{
-    
         /**
          * Este é o construtor da classe. Tudo aqui será executado quando o 
          * plugin for ativado.
          */
         public function __construct() {
             /* Adiciona o shortcode */
-            add_shortcode( 'angular-plugin', array( $this, 'MetodoSimples' ) );
+            add_shortcode( 'orcamento-client', array( $this, 'OrcamentoClient' ) );
+
+            add_shortcode( 'orcamento-client-admin', array( $this, 'OrcamentoClientAdmin' ) );
         }
         
         /**
          * Este é um método simples que irá exibir o texto do nosso shortcode
          */
-        public function MetodoSimples () {
-            include dirname(__FILE__) . '/lib/index.html';;
+        public function OrcamentoClient () {
+            include dirname(__FILE__) . '/lib/client/index.html';;
+        }
+        
+        public function OrcamentoClientAdmin () {
+            include dirname(__FILE__) . '/lib/client-admin/index.html';;
         }
         
 	} // TestePlugin
  
 	/* Carrega a classe */
-	$AngularPlugin_settings = new AngularPlugin();
+	$OrcamentoImagemPluginWP_settings = new OrcamentoImagemPluginWP();
     
 } // class_exists
