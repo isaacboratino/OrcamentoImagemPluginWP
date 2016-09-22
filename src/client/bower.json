@@ -1,6 +1,13 @@
 {
-  "name": "angular1",
-    "dependencies": {
-        "angular": "1.5.0"
-    }
+  "name": "orcamento imagem plugin wp",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-material": "^1.1.1",
+    "angular-bootstrap": "^2.1.3",
+    "angular-sanitize": "^1.5.8",
+    "bootstrap": "^3.3.7"
+  }
 }

@@ -1,0 +1,38 @@
+<link href="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/css/frameworks/angular-material/angular-material.min.css" rel="stylesheet" />
+
+Plugin angular
+
+<div ng-app="AppOrcamento">
+    <div ng-controller="ClientController as viewModel">
+        {{viewModel.teste}}
+        {{viewModel.Opcoes}}
+    </div>
+</div>
+
+<div layout="column" class="md-inline-form">
+
+  <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding="">
+    <div>
+      <md-input-container>
+        <label>Title</label>
+        <input >
+      </md-input-container>
+
+      <md-input-container>
+        <label>Email</label>
+        <input type="email">
+      </md-input-container>
+    </div>
+  </md-content>
+
+</div>
+
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular/angular.min.js"></script>
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-animate/angular-animate.min.js"></script>
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-aria/angular-aria.min.js"></script>
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-messages/angular-messages.min.js"></script>
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-material/angular-material.min.js"></script>
+
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/app/App.init.js"></script>
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/app/controllers/Client.controller.js"></script>
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/app/services/Client.factory.js"></script>

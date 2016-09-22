@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/isaacboratino/OrcamentoImagemPluginWP/issues"
   },
-  "homepage": "https://github.com/isaacboratino/OrcamentoImagemPluginWP#readme"
+  "homepage": "https://github.com/isaacboratino/OrcamentoImagemPluginWP#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower": "^0.21.2",
+    "grunt-contrib-copy": "^1.0.0"
+  }
 }

@@ -1,0 +1,117 @@
+.orcamento-imagem-plugin {
+    font-family: Arial, Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.opcao-container {
+    padding: 20px;
+    margin-top: -21px;
+    margin-bottom: 20px;
+    border: 1px solid #EFEFEF;
+    border-top: none;
+}
+
+.opcao-container>.titulo {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    color: #015072;
+    font-weight: bold;
+}
+
+.opcao-selecionada .nome-opcao {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.opcao-selecionada .titulo {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    color: #015072;
+    font-weight: bold;
+}
+
+.opcao-selecionada .imagem {
+    padding: 2px;
+    border: solid 1px #cae9f7;
+    border-radius: 5px;
+}
+
+.opcao-selecionada .form {
+    padding-left: 0;
+    text-align: justify;
+    color: #666;
+}
+
+.opcao-selecionada .form input {}
+
+.opcao-selecionada .form input.demonstrativo {
+    text-align: right !important;
+    font-weight: bold !important;
+}
+
+.opcao-selecionada .form .input-label {
+    width: 85px;
+    text-align: left;
+}
+
+.opcao-selecionada .observacao {
+    margin-top: 10px;
+    color: #666;
+}
+
+.opcao-lista-opcoes {
+    padding: 0 20px;
+}
+
+.opcao-lista-opcoes .col-md-3 {
+    padding: 0 3px;
+}
+
+.opcao-lista-opcoes-item {
+    height: 170px;
+    padding: 0;
+    border: solid 1px #a4d9f2;
+    border-radius: 5px;
+    background: #cae9f7;
+}
+
+.opcao-lista-opcoes-item.selecionado {
+    border-radius: 5px;
+    background: #015072;
+    border: solid 1px #a4d9f2;
+}
+
+.opcao-lista-opcoes-item.selecionado>.titulo,
+.opcao-lista-opcoes-item.selecionado>.nome {
+    color: white;
+}
+
+.opcao-lista-opcoes-item>.titulo {
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #015072;
+}
+
+.opcao-lista-opcoes-item>.nome {
+    margin: 10px 0;
+    text-align: center;
+    color: #015072;
+    font-size: 13px;
+}
+
+.opcao-lista-opcoes-item>.imagem {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.opcao-lista-opcoes-item>.valor {
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-weight: bold;
+    color: dodgerblue;
+}
