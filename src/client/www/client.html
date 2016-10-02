@@ -1,9 +1,24 @@
 <link href="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/css/frameworks/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 <link href="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/css/others/callout.css" rel="stylesheet" />
+
+<link href="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/css/others/ninja-slider/thumbnail-slider.css" rel="stylesheet" />
+
 <link href="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/css/app/app.css" rel="stylesheet" />
 
 <div ng-app="AppOrcamento" class="orcamento-imagem-plugin">
     <div ng-controller="ClientController as viewModel">
+
+        <ul id="light-slider">
+            <li>
+                <h3>First Slide</h3>
+                <p>Lorem ipsum Cupidatat quis pariatur anim.</p>
+            </li>
+            <li>
+                <h3>Second Slide</h3>
+                <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+            </li>
+            ...
+        </ul>
 
         <div id="charuto" style="display:none">
             <div class="bs-callout bs-callout-primary">
@@ -435,10 +450,13 @@
     </div>
 </div>
 
+
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular/angular.min.js"></script>
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-animate/angular-animate.min.js"></script>
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/others/ninja-slider/thumbnail-slider.js"></script>
 
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/app/App.init.js"></script>
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/app/controllers/Client.controller.js"></script>
