@@ -4,24 +4,40 @@
     angular
         .module(appName)
         .controller('ClientController', ClientController)
-    
-    function ClientController(ClientService) {
+
+    function ClientController($sce, ClientService) {
         var viewModel = this;
 
-        viewModel.teste = 'blabla';
         viewModel.Opcoes = {};
+        viewModel.OpcaoSelecionada = [];
 
-        (function initController()
-        {
-            //ClientService.GetOpcoesOrcamento(GetOpcoesOrcamento_HandleSuccess);
+        viewModel.SelecionarCharuto = SelecionarCharuto;
+        viewModel.GetHTML = GetHTML;
+
+        (function initController() {
+            ClientService.GetOpcoesOrcamento(GetOpcoesOrcamento_HandleSuccess);
         })();
 
-        function GetOpcoesOrcamento_HandleSuccess(response)
-        {
-            if (response.data.length > 0)
+        function GetOpcoesOrcamento_HandleSuccess(response) {
+            if (response.data.length > 0) {
                 viewModel.Opcoes = response.data;
-            else
-                viewModel.Opcoes = [{ idEmpresa: 0, nomeEmpresa: 'Nenhuma Opção Cadastrada...' }];
+
+                setTimeout(function() {
+                    var mcThumbnailSliderCharuto = new ThumbnailSlider(thumbnailSliderCharutoOptions);
+                    var mcThumbnailSliderCaixa = new ThumbnailSlider(thumbnailSliderCaixaOptions);
+                    var mcThumbnailSliderTipoRotulo = new ThumbnailSlider(thumbnailSliderTipoRotuloOptions);
+                }, 1000);
+
+            } else
+                viewModel.Opcoes = {};
+        }
+
+        function SelecionarCharuto(indiceArray) {
+            viewModel.OpcaoSelecionada = viewModel.Opcoes[indiceArray];
+        }
+
+        function GetHTML(content) {
+            return $sce.trustAsHtml(content);
         }
     }
 })();

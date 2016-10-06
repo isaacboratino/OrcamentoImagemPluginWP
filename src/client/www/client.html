@@ -8,316 +8,6 @@
 <div ng-app="AppOrcamento" class="orcamento-imagem-plugin">
     <div ng-controller="ClientController as viewModel">
 
-        <ul id="light-slider">
-            <li>
-                <h3>First Slide</h3>
-                <p>Lorem ipsum Cupidatat quis pariatur anim.</p>
-            </li>
-            <li>
-                <h3>Second Slide</h3>
-                <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-            </li>
-            ...
-        </ul>
-
-        <div id="charuto" style="display:none">
-            <div class="bs-callout bs-callout-primary">
-                <h4>Qual charuto você vai querer?</h4>
-            </div>
-
-            <div class="opcao-container">
-
-                <h4 class="titulo">Temos 4 tipos de charutos de chocolate</h4>
-
-                <div class="row opcao-lista-opcoes">
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item selecionado">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg" />
-                            <h5 class="nome">Waffle Banhado no Chocolate </h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_06bfed49d04f48028c193c619047cc59.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_06bfed49d04f48028c193c619047cc59.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Nestlé ao Leite</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_ef3218df65404369b1df8fac66af0900.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_ef3218df65404369b1df8fac66af0900.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Belga </h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_ef3218df65404369b1df8fac66af0900.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_ef3218df65404369b1df8fac66af0900.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Belga com Gianduia </h5>
-                        </div>
-                    </div>
-
-                </div>
-                <hr />
-                <div class="row opcao-selecionada">
-
-                    <div class="col-md-12">
-                        <h4 class="titulo">Opção selecionada:</h4>
-                        <h5 class="nome-opcao">Charutinho de Waffle Banhado no Chocolate</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <img class="imagem" class="img-selecionada" src="https://static.wixstatic.com/media/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg" />
-                    </div>
-                    <div class="col-md-6 form">
-
-                        Trata-se de um waffle crocante do interior, banhado no chocolate meio amargo. É tão gostoso quanto os outros, porém, mais barato devido ao processo de fabricação. O chocolate meio amargo "quebra" o doce do waffle, dando uma combinação perfeita de sabor
-                        e crocância.
-
-                        <!--
-                    <div style="margin-bottom:5px;">Informe a quantidade desejada:</div>
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon input-label">Quantidade</span>
-                      <input type="number" class="form-control" value="40">
-                    </div>
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon input-label">Valor</span>
-                      <input type="text" class="form-control demonstrativo" value="2,99" readonly="readonly">        
-                    </div>
-                    <div class="input-group input-group-sm">
-                      <span class="input-group-addon input-label">Total</span>
-                      <input type="text" class="form-control demonstrativo" value="119,60" readonly="readonly">
-                    </div>
-                    -->
-
-                    </div>
-                    <div class="col-md-12 observacao">
-                        Valor só do charutinho, sem caixa R$ 2,99 <br /> Valor do charuti1nho extra para reposição do pedido com a caixa R$ 2,69*
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-md-6">
-                    </div>
-                    <div class="col-md-6" style="text-align: right;">
-                        <button type="button" class="btn btn-primary" onclick="javascript:document.querySelector('#charuto').style.display = 'none';document.querySelector('#caixa').style.display = 'block';">
-                          <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Escolha o tipo de caixa
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="caixa" style="display:none">
-            <div class="bs-callout bs-callout-primary">
-                <h4>Qual tipo de Caixa você vai querer?</h4>
-            </div>
-
-            <div class="opcao-container">
-
-                <h4 class="titulo">Temos 3 tipos de caixas para os charutos</h4>
-
-                <div class="row opcao-lista-opcoes">
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item selecionado">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg" />
-                            <h5 class="nome">MDF 'Divertida'</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_8aad6b8222804b8499deac40e0983336~mv2_d_2064_1372_s_2.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_8aad6b8222804b8499deac40e0983336~mv2_d_2064_1372_s_2.jpg" />
-                            <h5 class="nome">MDF 'Clássica'</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_37b3325eb0ff4324ba786b1a480e8aae.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_37b3325eb0ff4324ba786b1a480e8aae.jpg" />
-                            <h5 class="nome">Cartonagem forrada com Tecido </h5>
-                        </div>
-                    </div>
-
-                </div>
-                <hr />
-                <div class="row opcao-selecionada">
-
-                    <div class="col-md-12">
-                        <h4 class="titulo">Opção selecionada:</h4>
-                        <h5 class="nome-opcao">Caixa MDF 'Divertida'</h5>
-                    </div>
-                    <div class="col-md-6">
-                        <img class="imagem" class="img-selecionada" src="https://static.wixstatic.com/media/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg" />
-                    </div>
-                    <div class="col-md-6 form">
-
-                        A Caixa MDF Divertida possui tampa removível com passa fita combinando com o tema escolhido e arte na parte externa da tampa. A arte pode ser escolhida mais abaixo. É legal utilizar uma arte que combine com a decoração do quarto, pois depois a caixa pode
-                        ser usada como um porta-treco no quarto o bebê) Os preços praticados abaixo contemplam a quantidade de charutos descrita + rótulo padrão + caixa MDF Divertida personalizada (com a arte à sua escolha).
-
-                    </div>
-                    <div class="col-md-12 observacao">
-                        Caixa Divertida com Charutos<br /> Caixa Divertida com 40 charutos Waffles = R$ 159,50 (Charutinho Waffle extra para reposição = R$ 2,69*)<br /> Caixa Divertida com 40 charutos Nestlé Ao Leite = R$ 207,90 (Charutinho Nestlé extra
-                        para resposição = R$ 4,20)<br /> Caixa Divertida com 40 charutos Belga = R$ 239,50 (Charutinho Belga extra para reposição = R$ 4,59*)<br /> Caixa Divertida com 60 charutos Belga com Gianduia = R$ 519,30 (Charutinho Belga Gianduia
-                        avulso = R$ 7,99)<br />
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-primary" onclick="javascript:document.querySelector('#charuto').style.display = 'block';document.querySelector('#caixa').style.display = 'none';">
-                        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Escolha o tipo de charuto
-                      </button>
-                    </div>
-                    <div class="col-md-6" style="text-align: right;">
-                        <button type="button" class="btn btn-primary">
-                          <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Escolha a decoração
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TIPO 2 -->
-        <div id="charuto-2" style="display:none">>
-            <div class="bs-callout bs-callout-primary">
-                <h4>Qual charuto você vai querer?</h4>
-            </div>
-
-            <div class="opcao-container">
-
-                <h4 class="titulo">Temos 4 tipos de charutos de chocolate</h4>
-
-                <div class="row opcao-lista-opcoes">
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item selecionado">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg" />
-                            <h5 class="nome">Waffle Banhado no Chocolate </h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_06bfed49d04f48028c193c619047cc59.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_06bfed49d04f48028c193c619047cc59.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Nestlé ao Leite</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_ef3218df65404369b1df8fac66af0900.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_ef3218df65404369b1df8fac66af0900.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Belga </h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_ef3218df65404369b1df8fac66af0900.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_ef3218df65404369b1df8fac66af0900.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Belga com Gianduia </h5>
-                        </div>
-                    </div>
-                    <div class="row opcao-selecionada">
-                        <div class="col-md-12 form" style="padding-left: 15px;">
-                            <p>
-                                Trata-se de um waffle crocante do interior, banhado no chocolate meio amargo. É tão gostoso quanto os outros, porém, mais barato devido ao processo de fabricação. O chocolate meio amargo "quebra" o doce do waffle, dando uma combinação perfeita de sabor
-                                e crocância.
-                            </p>
-                            Valor só do charutinho, sem caixa R$ 2,99. <br /> Valor do charutinho extra para reposição do pedido com a caixa R$ 2,69* <br />
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-md-6">
-                    </div>
-                    <div class="col-md-6" style="text-align: right;">
-                        <button type="button" class="btn btn-primary" onclick="javascript:document.querySelector('#charuto-2').style.display = 'none';document.querySelector('#caixa-2').style.display = 'block';">
-                          <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Escolha o tipo de caixa
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="caixa-2" style="display:none">
-            <div class="bs-callout bs-callout-primary">
-                <h4>Qual charuto você vai querer?</h4>
-            </div>
-
-            <div class="opcao-container">
-
-                <h4 class="titulo">Temos 3 tipos de caixas para os charutos</h4>
-
-                <div class="row opcao-lista-opcoes">
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item selecionado">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg" />
-                            <h5 class="nome">MDF 'Divertida'</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_8aad6b8222804b8499deac40e0983336~mv2_d_2064_1372_s_2.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_8aad6b8222804b8499deac40e0983336~mv2_d_2064_1372_s_2.jpg" />
-                            <h5 class="nome">MDF 'Clássica'</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_37b3325eb0ff4324ba786b1a480e8aae.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_37b3325eb0ff4324ba786b1a480e8aae.jpg" />
-                            <h5 class="nome">Cartonagem forrada com Tecido </h5>
-                        </div>
-                    </div>
-
-                    <div class="row opcao-selecionada">
-                        <div class="col-md-12 form" style="padding-left: 15px;">
-                            <p>
-                                A Caixa MDF Divertida possui tampa removível com passa fita combinando com o tema escolhido e arte na parte externa da tampa. A arte pode ser escolhida mais abaixo. É legal utilizar uma arte que combine com a decoração do quarto, pois depois a caixa pode
-                                ser usada como um porta-treco no quarto o bebê) Os preços praticados abaixo contemplam a quantidade de charutos descrita + rótulo padrão + caixa MDF Divertida personalizada (com a arte à sua escolha).
-                            </p>
-
-                            Caixa Divertida com Charutos<br /> Caixa Divertida com 40 charutos Waffles = R$ 159,50 (Charutinho Waffle extra para reposição = R$ 2,69*)<br /> Caixa Divertida com 40 charutos Nestlé Ao Leite = R$ 207,90 (Charutinho Nestlé
-                            extra para resposição = R$ 4,20)<br /> Caixa Divertida com 40 charutos Belga = R$ 239,50 (Charutinho Belga extra para reposição = R$ 4,59*)<br /> Caixa Divertida com 60 charutos Belga com Gianduia = R$ 519,30 (Charutinho Belga
-                            Gianduia avulso = R$ 7,99)<br />
-
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-primary" onclick="javascript:document.querySelector('#charuto-2').style.display = 'block';document.querySelector('#caixa-2').style.display = 'none';">
-                        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Escolha o tipo de charuto
-                      </button>
-                    </div>
-                    <div class="col-md-6" style="text-align: right;">
-                        <button type="button" class="btn btn-primary">
-                          <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Escolha a decoração
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- tipo 3 -->
         <div>
             <div class="bs-callout bs-callout-primary">
@@ -328,59 +18,32 @@
 
                 <h4 class="titulo">Temos 4 tipos de charutos de chocolate</h4>
 
-                <div class="row opcao-lista-opcoes">
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item selecionado">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg" />
-                            <h5 class="nome">Waffle Banhado no Chocolate </h5>
-                        </div>
+                <div id="thumbnail-slider-charuto" class="thumbnail-slider">
+                    <div class="inner">
+                        <ul>
+                            <li ng-repeat="opcao in viewModel.Opcoes | filter:{ opcao_tipo_id:1 }" ng-click="viewModel.SelecionarCharuto($index);">
+                                <div class="opcao-lista-opcoes-item">
+                                    <h5 class="titulo">Charutinho</h5>
+                                    <img class="imagem" ng-src="{{opcao.imagem_url}}" />
+                                    <h5 class="nome">{{opcao.nome}}</h5>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_06bfed49d04f48028c193c619047cc59.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_06bfed49d04f48028c193c619047cc59.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Nestlé ao Leite</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_ef3218df65404369b1df8fac66af0900.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_ef3218df65404369b1df8fac66af0900.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Belga </h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Charutinho</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_ef3218df65404369b1df8fac66af0900.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_ef3218df65404369b1df8fac66af0900.jpg" />
-                            <h5 class="nome">Maciço de Chocolate Belga com Gianduia </h5>
-                        </div>
-                    </div>
-
                 </div>
                 <hr />
                 <div class="row opcao-selecionada">
 
                     <div class="col-md-12">
                         <h4 class="titulo">Opção selecionada:</h4>
-                        <h5 class="nome-opcao">Charutinho de Waffle Banhado no Chocolate</h5>
+                        <h5 class="nome-opcao">{{viewModel.OpcaoSelecionada.nome}}</h5>
                     </div>
                     <div class="col-md-6">
-                        <img class="imagem" class="img-selecionada" src="https://static.wixstatic.com/media/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg/v1/fill/w_292,h_158,al_c,q_80,usm_0.66_1.00_0.01/808b8f_9bc397da3f694c21abbf6a842d3d9f6c.jpg" />
+                        <img class="imagem" class="img-selecionada" ng-src="{{viewModel.OpcaoSelecionada.imagem_url}}" />
                     </div>
-                    <div class="col-md-6 form">
-
-                        Trata-se de um waffle crocante do interior, banhado no chocolate meio amargo. É tão gostoso quanto os outros, porém, mais barato devido ao processo de fabricação. O chocolate meio amargo "quebra" o doce do waffle, dando uma combinação perfeita de sabor
-                        e crocância.
-
+                    <div class="col-md-6 form" ng-bind-html="viewModel.GetHTML(viewModel.OpcaoSelecionada.descricao_1)">
                     </div>
-                    <div class="col-md-12 observacao">
-                        Valor só do charutinho, sem caixa R$ 2,99 <br /> Valor do charuti1nho extra para reposição do pedido com a caixa R$ 2,69*
+                    <div class="col-md-12 observacao" ng-bind-html="viewModel.GetHTML(viewModel.OpcaoSelecionada.descricao_2)">
                     </div>
                 </div>
             </div>
@@ -450,13 +113,12 @@
     </div>
 </div>
 
+<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/others/ninja-slider/thumbnail-slider.js"></script>
 
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular/angular.min.js"></script>
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-animate/angular-animate.min.js"></script>
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/frameworks/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-
-<script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/scripts/others/ninja-slider/thumbnail-slider.js"></script>
 
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/app/App.init.js"></script>
 <script src="/wordpress/wp-content/plugins/orcamento-imagem-plugin-wp/app/controllers/Client.controller.js"></script>

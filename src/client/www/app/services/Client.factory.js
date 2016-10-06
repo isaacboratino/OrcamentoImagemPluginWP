@@ -1,9 +1,9 @@
-(function(){
+(function() {
     'use strict';
 
     angular
         .module(appName)
-        .service('ClientService',ClientService);
+        .service('ClientService', ClientService);
 
     function ClientService($http, URL_API_CONST) {
         var service = {};
@@ -14,13 +14,13 @@
 
         return service;
 
-        function GetOpcoesOrcamento(HandleSuccess)
-        {
-            return $http.get(urlApiComVersao + 'users')
+        function GetOpcoesOrcamento(HandleSuccess) {
+            return $http.get(urlApiComVersao + 'opcoes')
                 .then(HandleSuccess,
-                      function(e) {
-                          throw e;
-                      });
-        }   
+                    function(e) {
+                        alert('erro: ' + e);
+                        //throw e;
+                    });
+        }
     }
 })();

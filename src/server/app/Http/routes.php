@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('opcoes', ['uses' => 'OpcaoController@index','middleware'=>'cors']);
+
+/*Route::group(['middleware' => 'cors'], function(Router $router){
+    $router->get('opcoes', 'OpcaoController@index'); // <- your route here
+});*/
+
+//Route::resource('opcoes', 'OpcaoController');

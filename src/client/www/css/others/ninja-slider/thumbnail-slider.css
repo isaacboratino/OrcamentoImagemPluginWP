@@ -65,7 +65,7 @@
     display: inline-block;
     *display: inline!important;
     /*IE7 hack*/
-    border: 2px solid #222;
+    /*border: 2px solid #222;*/
     margin: 0 4px;
     /* Spacing between thumbs*/
     box-sizing: content-box;

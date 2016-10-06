@@ -61,10 +61,6 @@ var thumbnailSliderTipoRotuloOptions = {
     license: "b2e98"
 };
 
-var mcThumbnailSliderCharuto = new ThumbnailSlider(thumbnailSliderCharutoOptions);
-var mcThumbnailSliderCaixa = new ThumbnailSlider(thumbnailSliderCaixaOptions);
-var mcThumbnailSliderTipoRotulo = new ThumbnailSlider(thumbnailSliderTipoRotuloOptions);
-
 /* ThumbnailSlider Slider v2015.10.26. Copyright(C) www.menucool.com. All rights reserved. */
 function ThumbnailSlider(a) {
     "use strict";
