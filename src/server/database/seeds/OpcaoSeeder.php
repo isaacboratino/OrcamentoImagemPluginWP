@@ -56,6 +56,7 @@ class OpcaoSeeder extends Seeder
 Os preços praticados abaixo contemplam a quantidade de charutos descrita + rótulo padrão + caixa MDF Divertida personalizada (com a arte à sua escolha).', 
             'descricao_2' => '<strong>Caixa Divertida com Charutos</strong><ul>	<li>Caixa Divertida com 40 charutos Waffles = R$ 159,50 (Charutinho Waffle extra para reposição = R$ 2,69*)</li><li>Caixa Divertida com 40 charutos Nestlé Ao Leite = R$ 207,90 (Charutinho Nestlé extra para resposição = R$ 4,20)</li><li>Caixa Divertida com 40 charutos Belga = R$ 239,50 (Charutinho Belga extra para reposição = R$ 4,59*)</li><li>Caixa Divertida com 60 charutos Belga com Gianduia = R$ 519,30 (Charutinho Belga Gianduia avulso = R$ 7,99)</li></ul>', 
             'imagem_url' => 'https://static.wixstatic.com/media/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg',
+            'subopcao' => '2a',
             'ordem' => 1,
             'opcao_tipo_id' => 2 // caixa
         ]);
@@ -66,6 +67,7 @@ Os preços praticados abaixo contemplam a quantidade de charutos descrita + rót
 Os preços praticados abaixo contemplam a quantidade de charutos descrita + rótulo padrão + caixa MDF Clássica personalizada (com a arte à sua escolha).', 
             'descricao_2' => 'Caixa Clássica com CharutosCaixa Clássica com 40 charutos Waffles = R$ 169,50 (Charutinho Waffle extra para reposição = R$ 2,69*)Caixa Clássica com 40 charutos Nestlé Ao Leite = R$ 217,90 (Charutinho Nestlé extra para resposição = R$ 4,20)Caixa Clássica com 40 charutos elga = R$ 249,50 (Charutinho Belga extra para reposição = R$ 4,59*)Caixa Clássica com 60 charutos Belga com Gianduia = R$ 529,30 (Charutinho Belga Gianduia avulso = R$ 7,99)', 
             'imagem_url' => 'https://static.wixstatic.com/media/808b8f_8aad6b8222804b8499deac40e0983336~mv2_d_2064_1372_s_2.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_8aad6b8222804b8499deac40e0983336~mv2_d_2064_1372_s_2.jpg',
+            'subopcao' => '2b',
             'ordem' => 2,
             'opcao_tipo_id' => 2 // caixa
         ]);
@@ -75,7 +77,18 @@ Os preços praticados abaixo contemplam a quantidade de charutos descrita + rót
             'descricao_1' => 'A Caixa em Cartonagem forrada com tecido é feita no modelo "tampa livro" ou "francesa" cuja tampa é presa em uma das laterais. Charmosa, possui fita para amarrar a tampa. Temos algumas opções de tecidos disponíveis, favor consultar. Também podemos buscar um tecido novo no mercado ou ainda a mamãe pode nos enviar o mesmo tecido que está utilizando na decoração.Os preços praticados abaixo contemplam a quantidade de charutos descrita + rótulo padrão + caixa em cartonagem forrada com tecido personalizada (com nome na frente da caixa).', 
             'descricao_2' => 'Caixa em Cartonagem forrada com Tecido Caixa com Tecido com 40 charutos Waffles = R$ 179,50 (Charutinho Waffle extra para reposição = R$ 2,69*) Caixa com Tecido com 40 charutos Nestlé Ao Leite = R$ 227,90 (Charutinho Nestlé extra para resposição = R$ 4,20) Caixa com Tecido com 40 charutos Belga = R$ 259,50 (Charutinho Belga extra para reposição = R$ 4,59*) Caixa com Tecido com 60 charutos Belga com Gianduia = R$ 539,30 (Charutinho Belga Gianduia avulso = R$ 7,99)', 
             'imagem_url' => 'https://static.wixstatic.com/media/808b8f_37b3325eb0ff4324ba786b1a480e8aae.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_37b3325eb0ff4324ba786b1a480e8aae.jpg',
+            'subopcao' => '2c',
             'ordem' => 3,
+            'opcao_tipo_id' => 2 // caixa
+        ]);
+
+        App\OpcaoModel::create([            
+            'nome' => 'Não vou querer caixa', 
+            'descricao_1' => '', 
+            'descricao_2' => '', 
+            'imagem_url' => 'http://www.free-icons-download.net/images/prohibited-symbols-35844.png',
+            'subopcao' => '2d',
+            'ordem' => 4,
             'opcao_tipo_id' => 2 // caixa
         ]);
 
@@ -114,6 +127,44 @@ Os preços praticados abaixo contemplam a quantidade de charutos descrita + rót
             'imagem_url' => 'https://static.wixstatic.com/media/808b8f_3eb6ee7ebda510d47c34d76cc9d876b6.jpg/v1/fill/w_132,h_123,al_c,q_80,usm_0.66_1.00_0.01/808b8f_3eb6ee7ebda510d47c34d76cc9d876b6.jpg',
             'ordem' => 4,
             'opcao_tipo_id' => 3
+        ]);
+
+
+        /* Arte caixa pano */
+        App\OpcaoModel::create([
+            'nome' => '', 
+            'descricao_1' => '', 
+            'descricao_2' => '', 
+            'imagem_url' => 'https://static.wixstatic.com/media/808b8f_8d4dc42d027543fca4ddffd6432cee9c.jpg/v1/fill/w_649,h_431,al_c,q_90,usm_0.66_1.00_0.01/808b8f_8d4dc42d027543fca4ddffd6432cee9c.jpg',
+            'ordem' => 1,
+            'opcao_tipo_id' => 4
+        ]);
+
+        App\OpcaoModel::create([
+            'nome' => '', 
+            'descricao_1' => '', 
+            'descricao_2' => '', 
+            'imagem_url' => 'https://static.wixstatic.com/media/808b8f_b448057c9a744f29bc8ae05237dfba27.jpg/v1/fill/w_648,h_431,al_c,q_90,usm_0.66_1.00_0.01/808b8f_b448057c9a744f29bc8ae05237dfba27.jpg',
+            'ordem' => 2,
+            'opcao_tipo_id' => 4
+        ]);
+
+        App\OpcaoModel::create([
+            'nome' => '', 
+            'descricao_1' => '', 
+            'descricao_2' => '', 
+            'imagem_url' => 'https://static.wixstatic.com/media/808b8f_7710fd07a9c648ca9781af7456420220.jpg/v1/fill/w_620,h_413,al_c,q_90,usm_0.66_1.00_0.01/808b8f_7710fd07a9c648ca9781af7456420220.jpg',
+            'ordem' => 3,
+            'opcao_tipo_id' => 4
+        ]);
+
+        App\OpcaoModel::create([
+            'nome' => '', 
+            'descricao_1' => '', 
+            'descricao_2' => '', 
+            'imagem_url' => 'https://static.wixstatic.com/media/808b8f_77b7d3ad842645c5a0803782b2b1fabb.jpg/v1/fill/w_620,h_413,al_c,q_90,usm_0.66_1.00_0.01/808b8f_77b7d3ad842645c5a0803782b2b1fabb.jpg',
+            'ordem' => 4,
+            'opcao_tipo_id' => 4
         ]);
     }
 }

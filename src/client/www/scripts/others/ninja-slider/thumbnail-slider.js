@@ -5,7 +5,7 @@ var thumbnailSliderCharutoOptions = {
     thumbHeight: "100px",
     showMode: 3,
     autoAdvance: false,
-    selectable: true,
+    selectable: false,
     slideInterval: 3000,
     transitionSpeed: 700,
     shuffle: false,
@@ -26,7 +26,7 @@ var thumbnailSliderCaixaOptions = {
     thumbHeight: "100px",
     showMode: 3,
     autoAdvance: false,
-    selectable: true,
+    selectable: false,
     slideInterval: 3000,
     transitionSpeed: 700,
     shuffle: false,
@@ -47,7 +47,49 @@ var thumbnailSliderTipoRotuloOptions = {
     thumbHeight: "100px",
     showMode: 3,
     autoAdvance: false,
-    selectable: true,
+    selectable: false,
+    slideInterval: 3000,
+    transitionSpeed: 700,
+    shuffle: false,
+    startSlideIndex: 0, //0-based
+    pauseOnHover: true,
+    initSliderByCallingInitFunc: false,
+    rightGap: null,
+    keyboardNav: false,
+    mousewheelNav: true,
+    before: function(currentIdx, nextIdx, manual) { if (typeof nslider != "undefined") nslider.displaySlide(nextIdx); },
+    license: "b2e98"
+};
+
+var thumbnailSliderArteCaixaNormalOptions = {
+    sliderId: "thumbnail-slider-arte-caixa-normal",
+    orientation: "horizontal",
+    thumbWidth: "auto",
+    thumbHeight: "100px",
+    showMode: 3,
+    autoAdvance: false,
+    selectable: false,
+    slideInterval: 3000,
+    transitionSpeed: 700,
+    shuffle: false,
+    startSlideIndex: 0, //0-based
+    pauseOnHover: true,
+    initSliderByCallingInitFunc: false,
+    rightGap: null,
+    keyboardNav: false,
+    mousewheelNav: true,
+    before: function(currentIdx, nextIdx, manual) { if (typeof nslider != "undefined") nslider.displaySlide(nextIdx); },
+    license: "b2e98"
+};
+
+var thumbnailSliderArteCaixaPanoOptions = {
+    sliderId: "thumbnail-slider-arte-caixa-pano",
+    orientation: "horizontal",
+    thumbWidth: "auto",
+    thumbHeight: "100px",
+    showMode: 3,
+    autoAdvance: false,
+    selectable: false,
     slideInterval: 3000,
     transitionSpeed: 700,
     shuffle: false,

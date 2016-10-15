@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         //$this->call(OpcaoTipoSeeder::class);
-        $this->call(OpcaoSeeder::class);        
+        //$this->call(OpcaoSeeder::class);
+        $this->call(OutrosSeeder::class);
     }
 }

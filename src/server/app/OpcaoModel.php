@@ -10,6 +10,6 @@ class OpcaoModel extends Model
     protected $fillable = [
         'id', 'nome', 'descricao_1', 
         'descricao_2', 'imagem_url',
-        'ordem', 'tags', 'ativo'
+        'ordem', 'subopcao', 'tags', 'ativo'
     ];
 }

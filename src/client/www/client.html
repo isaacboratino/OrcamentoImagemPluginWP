@@ -8,7 +8,8 @@
 <div ng-app="AppOrcamento" class="orcamento-imagem-plugin">
     <div ng-controller="ClientController as viewModel">
 
-        <!-- tipo 3 -->
+
+        <!-- Charutinhos -->
         <div>
             <div class="bs-callout bs-callout-primary">
                 <h4>Qual charuto você vai querer?</h4>
@@ -21,7 +22,7 @@
                 <div id="thumbnail-slider-charuto" class="thumbnail-slider">
                     <div class="inner">
                         <ul>
-                            <li ng-repeat="opcao in viewModel.Opcoes | filter:{ opcao_tipo_id:1 }" ng-click="viewModel.SelecionarCharuto($index);">
+                            <li ng-repeat="opcao in viewModel.Opcoes | filter:{ opcao_tipo_id:1 }" ng-click="viewModel.SelecionarCharuto(opcao.id, $event);">
                                 <div class="opcao-lista-opcoes-item">
                                     <h5 class="titulo">Charutinho</h5>
                                     <img class="imagem" ng-src="{{opcao.imagem_url}}" />
@@ -32,23 +33,25 @@
                     </div>
                 </div>
                 <hr />
-                <div class="row opcao-selecionada">
+                <div class="row opcao-selecionada" ng-if="viewModel.CharutoSelecionado != null">
 
                     <div class="col-md-12">
                         <h4 class="titulo">Opção selecionada:</h4>
-                        <h5 class="nome-opcao">{{viewModel.OpcaoSelecionada.nome}}</h5>
+                        <h5 class="nome-opcao">{{viewModel.CharutoSelecionado.nome}}</h5>
                     </div>
                     <div class="col-md-6">
-                        <img class="imagem" class="img-selecionada" ng-src="{{viewModel.OpcaoSelecionada.imagem_url}}" />
+                        <img class="imagem" ng-src="{{viewModel.CharutoSelecionado.imagem_url}}" />
                     </div>
-                    <div class="col-md-6 form" ng-bind-html="viewModel.GetHTML(viewModel.OpcaoSelecionada.descricao_1)">
+                    <div class="col-md-6 form" ng-bind-html="viewModel.GetHTML(viewModel.CharutoSelecionado.descricao_1)">
                     </div>
-                    <div class="col-md-12 observacao" ng-bind-html="viewModel.GetHTML(viewModel.OpcaoSelecionada.descricao_2)">
+                    <div class="col-md-12 observacao" ng-bind-html="viewModel.GetHTML(viewModel.CharutoSelecionado.descricao_2)">
                     </div>
                 </div>
             </div>
         </div>
 
+
+        <!-- Caixinhas -->
         <div>
             <div class="bs-callout bs-callout-primary">
                 <h4>Qual tipo de Caixa você vai querer?</h4>
@@ -58,56 +61,127 @@
 
                 <h4 class="titulo">Temos 3 tipos de caixas para os charutos</h4>
 
-                <div class="row opcao-lista-opcoes">
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item selecionado">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg" />
-                            <h5 class="nome">MDF 'Divertida'</h5>
-                        </div>
+                <div id="thumbnail-slider-caixa" class="thumbnail-slider">
+                    <div class="inner">
+                        <ul>
+                            <li ng-repeat="opcao in viewModel.Opcoes | filter:{ opcao_tipo_id:2 }" ng-click="viewModel.SelecionarCaixa(opcao.id, $event);">
+                                <div class="opcao-lista-opcoes-item">
+                                    <h5 class="titulo">Caixa</h5>
+                                    <img class="imagem" ng-src="{{opcao.imagem_url}}" />
+                                    <h5 class="nome">{{opcao.nome}}</h5>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_8aad6b8222804b8499deac40e0983336~mv2_d_2064_1372_s_2.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_8aad6b8222804b8499deac40e0983336~mv2_d_2064_1372_s_2.jpg" />
-                            <h5 class="nome">MDF 'Clássica'</h5>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="opcao-lista-opcoes-item">
-                            <h5 class="titulo">Caixa</h5>
-                            <img class="imagem" src="https://static.wixstatic.com/media/808b8f_37b3325eb0ff4324ba786b1a480e8aae.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_37b3325eb0ff4324ba786b1a480e8aae.jpg" />
-                            <h5 class="nome">Cartonagem forrada com Tecido </h5>
-                        </div>
-                    </div>
-
                 </div>
                 <hr />
-                <div class="row opcao-selecionada">
+                <div class="row opcao-selecionada" ng-if="viewModel.CaixaSelecionada != null && viewModel.CaixaSelecionada.subopcao != '2d'">
 
                     <div class="col-md-12">
                         <h4 class="titulo">Opção selecionada:</h4>
-                        <h5 class="nome-opcao">Caixa MDF 'Divertida'</h5>
+                        <h5 class="nome-opcao">{{viewModel.CaixaSelecionada.nome}}</h5>
                     </div>
                     <div class="col-md-6">
-                        <img class="imagem" class="img-selecionada" src="https://static.wixstatic.com/media/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg/v1/fill/w_411,h_180,al_c,q_80,usm_0.66_1.00_0.01/808b8f_6213f25f28154fcaac0ac92828ce2517.jpg" />
+                        <img class="imagem" ng-src="{{viewModel.CaixaSelecionada.imagem_url}}" />
                     </div>
-                    <div class="col-md-6 form">
-
-                        A Caixa MDF Divertida possui tampa removível com passa fita combinando com o tema escolhido e arte na parte externa da tampa. A arte pode ser escolhida mais abaixo. É legal utilizar uma arte que combine com a decoração do quarto, pois depois a caixa pode
-                        ser usada como um porta-treco no quarto o bebê) Os preços praticados abaixo contemplam a quantidade de charutos descrita + rótulo padrão + caixa MDF Divertida personalizada (com a arte à sua escolha).
-
+                    <div class="col-md-6 form" ng-bind-html="viewModel.GetHTML(viewModel.CaixaSelecionada.descricao_1)">
                     </div>
-                    <div class="col-md-12 observacao">
-                        Caixa Divertida com Charutos<br /> Caixa Divertida com 40 charutos Waffles = R$ 159,50 (Charutinho Waffle extra para reposição = R$ 2,69*)<br /> Caixa Divertida com 40 charutos Nestlé Ao Leite = R$ 207,90 (Charutinho Nestlé extra
-                        para resposição = R$ 4,20)<br /> Caixa Divertida com 40 charutos Belga = R$ 239,50 (Charutinho Belga extra para reposição = R$ 4,59*)<br /> Caixa Divertida com 60 charutos Belga com Gianduia = R$ 519,30 (Charutinho Belga Gianduia
-                        avulso = R$ 7,99)<br />
+                    <div class="col-md-12 observacao" ng-bind-html="viewModel.GetHTML(viewModel.CaixaSelecionada.descricao_2)">
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div ng-show="viewModel.CaixaSelecionada.subopcao == '2a' || viewModel.CaixaSelecionada.subopcao == '2b'">
+
+            <!-- Arte caixa -->
+            <div>
+                <div class="bs-callout bs-callout-primary">
+                    <h4>Qual decoração você gostaria para a caixinha de charutos?</h4>
+                </div>
+
+                <div class="opcao-container">
+
+                    <h4 class="titulo">Temos dezenas de artes para as caixas em MDF</h4>
+
+                    <div id="thumbnail-slider-arte-caixa-normal" class="thumbnail-slider">
+                        <div class="inner">
+                            <ul>
+                                <li ng-repeat="opcao in viewModel.Opcoes | filter:{ opcao_tipo_id:3 }" ng-click="viewModel.SelecionarCaixaArteNormal(opcao.id, $event);">
+                                    <div class="opcao-lista-opcoes-item">
+                                        <h5 class="titulo"></h5>
+                                        <img class="imagem" ng-src="{{opcao.imagem_url}}" />
+                                        <h5 class="nome"></h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row opcao-selecionada" ng-if="viewModel.CaixaArteNormalSelecionada != null">
+
+                        <div class="col-md-12">
+                            <h4 class="titulo">Opção selecionada:</h4>
+                            <h5 class="nome-opcao">{{viewModel.CaixaArteNormalSelecionada.nome}}</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="imagem" ng-src="{{viewModel.CaixaArteNormalSelecionada.imagem_url}}" />
+                        </div>
+                        <div class="col-md-6 form" ng-bind-html="viewModel.GetHTML(viewModel.CaixaArteNormalSelecionada.descricao_1)">
+                        </div>
+                        <div class="col-md-12 observacao" ng-bind-html="viewModel.GetHTML(viewModel.CaixaArteNormalSelecionada.descricao_2)">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div ng-show="viewModel.CaixaSelecionada.subopcao == '2c'">
+
+            <!-- Arte caixa pano -->
+            <div>
+                <div class="bs-callout bs-callout-primary">
+                    <h4>Qual decoração você gostaria para a caixinha de charutos?</h4>
+                </div>
+
+                <div class="opcao-container">
+
+                    <h4 class="titulo">Temos dezenas de artes para as caixas em MDF</h4>
+
+                    <div id="thumbnail-slider-arte-caixa-pano" class="thumbnail-slider">
+                        <div class="inner">
+                            <ul>
+                                <li ng-repeat="opcao in viewModel.Opcoes | filter:{ opcao_tipo_id:4 }" ng-click="viewModel.SelecionarCaixaArtePano(opcao.id, $event);">
+                                    <div class="opcao-lista-opcoes-item">
+                                        <h5 class="titulo"></h5>
+                                        <img class="imagem" ng-src="{{opcao.imagem_url}}" />
+                                        <h5 class="nome"></h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row opcao-selecionada" ng-if="viewModel.CaixaArtePanoSelecionada != null">
+
+                        <div class="col-md-12">
+                            <h4 class="titulo">Opção selecionada:</h4>
+                            <h5 class="nome-opcao">{{viewModel.CaixaArtePanoSelecionada.nome}}</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <img class="imagem" ng-src="{{viewModel.CaixaArtePanoSelecionada.imagem_url}}" />
+                        </div>
+                        <div class="col-md-6 form" ng-bind-html="viewModel.GetHTML(viewModel.CaixaArtePanoSelecionada.descricao_1)">
+                        </div>
+                        <div class="col-md-12 observacao" ng-bind-html="viewModel.GetHTML(viewModel.CaixaArtePanoSelecionada.descricao_2)">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>

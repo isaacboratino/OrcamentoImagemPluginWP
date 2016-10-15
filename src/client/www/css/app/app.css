@@ -43,6 +43,12 @@
     padding-left: 0;
     text-align: justify;
     color: #666;
+    overflow: auto;
+}
+
+.opcao-selecionada .imagem,
+.opcao-selecionada .form {
+    height: 180px;
 }
 
 .opcao-selecionada .form input.demonstrativo {
@@ -69,7 +75,7 @@
 }
 
 .opcao-lista-opcoes-item {
-    width: 180px !important;
+    width: 150px !important;
     height: 180px !important;
     padding: 0;
     border: solid 1px #a4d9f2;
@@ -84,16 +90,13 @@
     }
 }
 
-li.active>div,
 .opcao-lista-opcoes-item.selecionado {
     border-radius: 5px;
     background: #015072;
     border: solid 1px #a4d9f2;
 }
 
-li.active>div>.titulo,
 .opcao-lista-opcoes-item.selecionado>.titulo,
-li.active>div>.nome,
 .opcao-lista-opcoes-item.selecionado>.nome {
     color: white;
 }
@@ -116,6 +119,7 @@ li.active>div>.nome,
 .opcao-lista-opcoes-item>.imagem {
     margin-bottom: 0;
     margin-top: 0;
+    max-height: 78px;
 }
 
 .opcao-lista-opcoes-item>.valor {

@@ -366,3 +366,171 @@
         padding: 0;
     }
 }
+
+
+/* Arte Caixa Pano */
+
+#thumbnail-slider-arte-caixa-pano-pause-play {
+    display: none;
+}
+
+
+/*.pause*/
+
+#thumbnail-slider-arte-caixa-pano-prev,
+#thumbnail-slider-arte-caixa-pano-next {
+    position: absolute;
+    background-color: none;
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+    top: 50%;
+    margin: 0;
+    margin-top: -25px;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 1;
+    *background-color: #ccc;
+    /*IE7 hack*/
+}
+
+#thumbnail-slider-arte-caixa-pano-prev {
+    left: 0px;
+    right: auto;
+}
+
+#thumbnail-slider-arte-caixa-pano-next {
+    left: auto;
+    right: 0px;
+}
+
+#thumbnail-slider-arte-caixa-pano-next.disabled,
+#thumbnail-slider-arte-caixa-pano-prev.disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+
+/* arrows */
+
+#thumbnail-slider-arte-caixa-pano-prev::before,
+#thumbnail-slider-arte-caixa-pano-next::before {
+    position: absolute;
+    top: 15px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #DDD;
+    border-top: 3px solid #DDD;
+}
+
+#thumbnail-slider-arte-caixa-pano-prev::before {
+    left: 14px;
+    -ms-transform: rotate(-45deg);
+    /*IE9*/
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#thumbnail-slider-arte-caixa-pano-next::before {
+    right: 14px;
+    -ms-transform: rotate(135deg);
+    /*IE9*/
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+
+/*Responsive settings*/
+
+@media only screen and (max-width:736px) {
+    .thumbnail-slider {
+        padding: 0;
+    }
+}
+
+
+/* Arte Caixa Normal */
+
+#thumbnail-slider-arte-caixa-normal-pause-play {
+    display: none;
+}
+
+
+/*.pause*/
+
+#thumbnail-slider-arte-caixa-normal-prev,
+#thumbnail-slider-arte-caixa-normal-next {
+    position: absolute;
+    background-color: none;
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+    top: 50%;
+    margin: 0;
+    margin-top: -25px;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 1;
+    *background-color: #ccc;
+    /*IE7 hack*/
+}
+
+#thumbnail-slider-arte-caixa-normal-prev {
+    left: 0px;
+    right: auto;
+}
+
+#thumbnail-slider-arte-caixa-normal-next {
+    left: auto;
+    right: 0px;
+}
+
+#thumbnail-slider-arte-caixa-normal-next.disabled,
+#thumbnail-slider-arte-caixa-normal-prev.disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+
+/* arrows */
+
+#thumbnail-slider-arte-caixa-normal-prev::before,
+#thumbnail-slider-arte-caixa-normal-next::before {
+    position: absolute;
+    top: 15px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #DDD;
+    border-top: 3px solid #DDD;
+}
+
+#thumbnail-slider-arte-caixa-normal-prev::before {
+    left: 14px;
+    -ms-transform: rotate(-45deg);
+    /*IE9*/
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#thumbnail-slider-arte-caixa-normal-next::before {
+    right: 14px;
+    -ms-transform: rotate(135deg);
+    /*IE9*/
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+
+/*Responsive settings*/
+
+@media only screen and (max-width:736px) {
+    .thumbnail-slider {
+        padding: 0;
+    }
+}

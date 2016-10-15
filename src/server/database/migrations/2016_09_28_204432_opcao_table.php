@@ -19,6 +19,7 @@ class OpcaoTable extends Migration
             $table->string('descricao_2', 1000)->nullable();
             $table->string('imagem_url', 2000)->nullable();
             $table->integer('ordem')->nullable();
+            $table->string('subopcao', 4)->nullable();
             $table->string('tags', 1000)->nullable();
             $table->char('ativo', 1)->default('S');
             $table->timestamps();
